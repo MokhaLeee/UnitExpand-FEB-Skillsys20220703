@@ -1,0 +1,7 @@
+*.gba
+*.sym
+.vscode
+*.lyn.event
+*.o
+.cache_dir
+*__pycache__

@@ -1,0 +1,15 @@
+#ifndef FreeSpace
+    #define FreeSpace 0xB84A00
+    ORG FreeSpace
+#endif
+
+MESSAGE bmsave xmap and link-arena used as unit-expansion by Mokha
+
+#include "FreeRamSpaceCtrl.event"
+
+#include "wizardry/BmsaveRework/BmsaveRework.event"
+#include "wizardry/BwlSupport/BwlSupport.event"
+#include "wizardry/SkillsysRework/SkillsysRework.event"
+#include "wizardry/ExpandSaveRework/ExpandSaveRework.event"
+#include "wizardry/PrepUnitListRework/PrepUnitListRework.lyn.event"
+#include "wizardry/BmunitRework/BmunitRework.event"

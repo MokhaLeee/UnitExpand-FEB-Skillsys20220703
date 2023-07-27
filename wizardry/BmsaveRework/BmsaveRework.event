@@ -1,0 +1,3 @@
+#include "source/BmsaveHack.event"
+#include "source/RemoveLinkArena.event"
+#include "source/RemoveXmap.event"

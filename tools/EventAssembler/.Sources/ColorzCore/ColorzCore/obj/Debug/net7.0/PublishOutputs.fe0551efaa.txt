@@ -1,0 +1,5 @@
+/home/mokha/EventAssembler/ColorzCore
+/home/mokha/EventAssembler/ColorzCore.dll
+/home/mokha/EventAssembler/ColorzCore.deps.json
+/home/mokha/EventAssembler/ColorzCore.runtimeconfig.json
+/home/mokha/EventAssembler/ColorzCore.pdb

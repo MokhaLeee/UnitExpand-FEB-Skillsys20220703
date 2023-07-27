@@ -1,0 +1,57 @@
+#ifndef Return_0
+#define Return_0 "SHORT $2000 $4770"
+#endif
+
+PUSH
+
+ORG	$A2C2C
+Return_0
+ORG	$A44C8
+Return_0
+ORG	$A4534
+Return_0
+ORG	$A4602
+SHORT $0
+ORG	$A460A
+SHORT $0 $0
+ORG	$A4684
+Return_0
+ORG	$A474C
+Return_0
+ORG	$A478C
+Return_0
+ORG	$A47CC
+Return_0
+ORG	$A481C
+Return_0
+ORG	$A487C
+Return_0
+
+ORG	$A49C8
+Return_0
+ORG	$A49FC
+Return_0
+ORG	$A4A34
+Return_0
+ORG	$A4CFC
+Return_0
+
+ORG	$A4140
+SHORT $2000 $0
+
+ORG	$A4904
+Return_0
+
+ORG	$A4928
+Return_0
+ORG	$A4958
+Return_0
+ORG	$A4978
+Return_0
+ORG	$A49A4
+Return_0
+
+ORG	$A481C
+Return_0
+
+POP

@@ -1,0 +1,15 @@
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/bin/Debug/net7.0/ColorzCore
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/bin/Debug/net7.0/ColorzCore.deps.json
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/bin/Debug/net7.0/ColorzCore.runtimeconfig.json
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/bin/Debug/net7.0/ColorzCore.dll
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/bin/Debug/net7.0/ColorzCore.pdb
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.csproj.AssemblyReference.cache
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.GeneratedMSBuildEditorConfig.editorconfig
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.AssemblyInfoInputs.cache
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.AssemblyInfo.cs
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.csproj.CoreCompileInputs.cache
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.dll
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/refint/ColorzCore.dll
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.pdb
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ColorzCore.genruntimeconfig.cache
+/home/mokha/EventAssembler/.Sources/ColorzCore/ColorzCore/obj/Debug/net7.0/ref/ColorzCore.dll
