@@ -60,6 +60,9 @@ static void UnpackUnit(u8 uid, struct GameSaveUnit * unitp)
 
     ClearUnit(unit);
 
+    unit->pCharacterData = GetCharacterData(unitp->pid);
+    unit->pClassData = GetClassData(unitp->jid);
+
     unit->maxHP = unitp->hp;
     unit->pow = unitp->str;
     unit->_u3A = unitp->mag;

@@ -1,0 +1,158 @@
+#include EAstdlib.event
+EventPointerTable(7,MyPrologue)
+
+#ifndef FreeSpace
+	#define	FreeSpace $B2A610
+	ORG FreeSpace
+#endif
+
+
+ALIGN 32
+MyPrologue:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits EnemyUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+PlayerUnits:
+UNIT 1 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT 2 Paladin Eirika Level(1,Ally,False) [4, 4] 0x0 0x0 0x0 0x1 [SilverLance,SteelSword] NoAI
+UNIT 3 Sniper Eirika Level(1,Ally,False) [5, 3] 0x0 0x0 0x0 0x1 [SilverBow,BraveBow] NoAI
+UNIT 4 DemonKing Eirika Level(1,Ally,False) [5, 4] 0x0 0x0 0x0 0x1 [SilverBow,DemonLight] NoAI
+UNIT
+
+EnemyUnits:
+UNIT 0x4A Mage_F 0 Level(10,2,True) [6, 4] 0x0 0x0 0x0 0x1 [Purge,Divine,Heal] NoAI
+UNIT
+
+UnitList2:
+UNIT $5 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $6 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $7 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $8 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $9 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $A Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $B Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $C Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $D Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $E Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $F  Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $10 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $11 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $12 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $13 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $14 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $15 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $16 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $17 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $18 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $19 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $1A Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $1B Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $1C Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $1D Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $1E Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $1F Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $20 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $21 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $22 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $23 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $24 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $25 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $26 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $27 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $28 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $29 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $2A Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $2B Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $2C Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $40 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $42 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $43 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $44 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $45 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $46 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $47 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $48 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $4A Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $4C Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $4D Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $4E Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $4F Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $51 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $52 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $53 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $54 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $57 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $5A Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $5B Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $66 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $68 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $69 Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $6A Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $6B Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $6C Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT $6D Mage_F Eirika Level(10,Ally,False) [4, 3] 0x0 0x0 0x0 0x1 [GuidingRing, Fire, EnergyRing, Thunder] NoAI
+UNIT
+
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Vendor(ShopItems, 1, 1)
+Armory(ArmoryItems, 1, 2)
+Village(0x8, VillageEvent, 2, 1)
+END_MAIN
+
+Dunno:
+WORD $00
+END_MAIN
+
+Tutorial:
+WORD $00
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 32
+BeginningScene:
+LOAD1 1 PlayerUnits
+ENUN
+LOAD1 1 EnemyUnits
+ENUN
+LOAD1 1 UnitList2
+ENUN
+PREP
+ENDA
+
+EndingScene:
+MNC2 0x1
+ENDA
+
+MiscBasedEvents:
+DefeatAll(EndingScene)
+END_MAIN
+
+ALIGN 32
+VillageEvent:
+	VillageEventItem(0x10, Village, Boots)
+
+
+ALIGN 4
+ShopItems:
+SHLI Thunder Elfire Nosferatu Divine Mend PureWater Elixir
+
+ALIGN 4
+ArmoryItems:
+SHLI SteelAxe SteelLance SteelBow SteelSword HandAxe Javelin

@@ -12,4 +12,8 @@ MESSAGE bmsave xmap and link-arena used as unit-expansion by Mokha
 #include "wizardry/SkillsysRework/SkillsysRework.event"
 #include "wizardry/ExpandSaveRework/ExpandSaveRework.event"
 #include "wizardry/PrepUnitListRework/PrepUnitListRework.lyn.event"
+// #include "wizardry/PrepUnitListRework/BmusortRework.lyn.event"
 #include "wizardry/BmunitRework/BmunitRework.event"
+#include "wizardry/BmudispRework/BmudispRework.event"
+
+#include "test-prologue.event"

@@ -43,12 +43,12 @@ void PrepSetLatestCharId(int val)
 void MakePrepUnitList(void)
 {
     int i, cur = 0;
-    struct Unit * unit;
 
-    for (i = 1; i < 0x40; i++) {
-        unit = GetUnit(i);
+    for (i = 1; i < 0x40; i++)
+    {
+        struct Unit * unit = GetUnit(i);
 
-        if (!UNIT_IS_VALID(unit))
+        if (!unit || !UNIT_IS_VALID(unit))
             continue;
 
         if (IsUnitInCurrentRoster(unit)) {
@@ -58,9 +58,9 @@ void MakePrepUnitList(void)
     }
 
     for (i = 0xC1; i < 0x100; i++) {
-        unit = GetUnit(i);
+        struct Unit * unit = GetUnit(i);
 
-        if (!UNIT_IS_VALID(unit))
+        if (!unit || !UNIT_IS_VALID(unit))
             continue;
 
         if (IsUnitInCurrentRoster(unit)) {
@@ -70,4 +70,27 @@ void MakePrepUnitList(void)
     }
 
     PrepSetUnitAmount(cur);
+}
+
+void AtMenuSetUnitStateAndEndFlag(struct ProcAtMenu * proc)
+{
+    int i;
+
+    for (i = 1; i < 64; i++)
+    {
+        struct Unit * unit = GetUnit(i);
+
+        if (UNIT_IS_VALID(unit))
+            unit->state &= ~US_BIT25;
+    }
+
+    for (i = 0xC1; i < 0x100; i++)
+    {
+        struct Unit * unit = GetUnit(i);
+
+        if (UNIT_IS_VALID(unit))
+            unit->state &= ~US_BIT25;
+    }
+
+    proc->end_prep = 1;
 }

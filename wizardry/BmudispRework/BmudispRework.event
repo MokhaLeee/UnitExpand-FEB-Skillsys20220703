@@ -1,0 +1,17 @@
+#define gSMSHandleArrayRe 0x0203D800
+
+PUSH
+
+ORG $272C4
+WORD gSMSHandleArrayRe
+
+ORG $27388
+WORD gSMSHandleArrayRe
+
+ORG $2741C
+WORD gSMSHandleArrayRe
+
+ORG $28108
+WORD gSMSHandleArrayRe
+
+POP

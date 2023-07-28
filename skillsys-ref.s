@@ -1,5 +1,9 @@
 @ free ram-spaces!
+dat 0x02039800, UnitSwapBuffer1
+dat 0x0203B800, UnitSwapBuffer2
+dat 0x0203D800, gSMSHandleArrayRe
 dat 0x0203F000, gUnitLookupExpa
+dat 0x0203FDDC, gStatScreenSlideUnit
 dat 0x0203FDF0, gPrepUnitListRework
 
 @ port arm-none-eabi to agbcc!

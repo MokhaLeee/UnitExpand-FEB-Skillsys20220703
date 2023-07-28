@@ -16,7 +16,12 @@ struct Unit * GetFreeBlueUnit(const struct UnitDefinition * uDef)
         struct Unit * unit = GetUnit(i);
 
         if (unit->pCharacterData == NULL)
+        {
+            /* Maybe we need this to handler for SMS palette */
+            unit->index = 1;
+
             return unit;
+        }
     }
 
     return NULL;
