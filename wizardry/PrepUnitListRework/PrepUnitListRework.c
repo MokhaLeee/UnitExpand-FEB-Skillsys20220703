@@ -57,7 +57,7 @@ void MakePrepUnitList(void)
         }
     }
 
-    for (i = 0xC1; i < 0x100; i++) {
+    for (i = 0xC0; i < 0x100; i++) {
         struct Unit * unit = GetUnit(i);
 
         if (!unit || !UNIT_IS_VALID(unit))
@@ -76,7 +76,7 @@ void AtMenuSetUnitStateAndEndFlag(struct ProcAtMenu * proc)
 {
     int i;
 
-    for (i = 1; i < 64; i++)
+    for (i = 1; i < 0x40; i++)
     {
         struct Unit * unit = GetUnit(i);
 
@@ -84,7 +84,7 @@ void AtMenuSetUnitStateAndEndFlag(struct ProcAtMenu * proc)
             unit->state &= ~US_BIT25;
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         struct Unit * unit = GetUnit(i);
 

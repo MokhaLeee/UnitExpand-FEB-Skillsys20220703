@@ -1,7 +1,9 @@
 #include "global.h"
 #include "bmunit.h"
 #include "proc.h"
+#include "fontgrp.h"
 #include "statscreen.h"
+#include "soundwrapper.h"
 
 struct StatScreenEffectProc
 {
@@ -34,6 +36,8 @@ struct StatScreenInfo
 };
 
 extern struct StatScreenInfo EWRAM_DATA sStatScreenInfo;
+
+void StatScreen_Display(struct Proc* proc);
 
 extern struct ProcCmd CONST_DATA gProcScr_SSUnitSlide[];
 extern struct ProcCmd CONST_DATA gProcScr_StatScreen[];

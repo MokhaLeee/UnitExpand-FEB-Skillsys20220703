@@ -12,7 +12,7 @@ struct Unit * GetFreeBlueUnit(const struct UnitDefinition * uDef)
             return unit;
     }
 
-    for (i = 0xC1; i < 0x100; ++i) {
+    for (i = 0xC0; i < 0x100; ++i) {
         struct Unit * unit = GetUnit(i);
 
         if (unit->pCharacterData == NULL)

@@ -8,37 +8,44 @@
 void LoadPlayerUnitsFromUnitStack(void)
 {
     int i, amt = 0;
-    for (i = 0; i < 0x3F; ++i)
+
+    for (i = 0; i < 0x40; ++i)
     {
         struct Unit * unit = GetUnit(i);
-        if (unit)
-            ClearUnit(unit);
+        if (!unit)
+            continue;
+
+        ClearUnit(unit);
 
         if (amt < (sUnitStackSize - 1))
         {
             CpuCopy16(
-                sUnitStackBase + amt * sizeof(struct Unit),
+                sUnitStackBase + amt,
                 unit,
                 sizeof(struct Unit));
+
+            unit->index = i;
 
             amt++;
         }
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         struct Unit * unit = GetUnit(i);
-        if (unit)
-            ClearUnit(unit);
+        if (!unit)
+            continue;
+
+        ClearUnit(unit);
 
         if (amt < (sUnitStackSize - 1))
         {
             CpuCopy16(
-                sUnitStackBase + amt * sizeof(struct Unit),
+                sUnitStackBase + amt,
                 unit,
                 sizeof(struct Unit));
 
-            unit->index = 0;
+            unit->index = 1;
 
             amt++;
         }
@@ -48,37 +55,43 @@ void LoadPlayerUnitsFromUnitStack(void)
 void LoadPlayerUnitsFromUnitStack2(void)
 {
     int i, amt = 0;
-    for (i = 0; i < 0x3F; ++i)
+    for (i = 0; i < 0x40; ++i)
     {
         struct Unit * unit = GetUnit(i);
-        if (unit)
-            ClearUnit(unit);
+        if (!unit)
+            continue;
+
+        ClearUnit(unit);
 
         if (amt < (sUnitStackSize - 1))
         {
             CpuCopy16(
-                sUnitStackBase + amt * sizeof(struct Unit),
+                sUnitStackBase + amt,
                 unit,
                 sizeof(struct Unit));
+
+            unit->index = i;
 
             amt++;
         }
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         struct Unit * unit = GetUnit(i);
-        if (unit)
-            ClearUnit(unit);
+        if (!unit)
+            continue;
+
+        ClearUnit(unit);
 
         if (amt < (sUnitStackSize - 1))
         {
             CpuCopy16(
-                sUnitStackBase + amt * sizeof(struct Unit),
+                sUnitStackBase + amt,
                 unit,
                 sizeof(struct Unit));
 
-            unit->index = 0;
+            unit->index = 1;
 
             amt++;
         }
@@ -95,6 +108,7 @@ void ShrinkPlayerUnits(void)
     if (BM_FLAG_LINKARENA & gBmSt.gameStateBits)
         return;
 
+    CpuFastFill16(0, UnitSwapBuffer2, 0x2000);
     InitUnitStack(UnitSwapBuffer2);
 
     for (i = FACTION_BLUE + 1; i < FACTION_GREEN; ++i)
@@ -108,7 +122,7 @@ void ShrinkPlayerUnits(void)
             PushUnit(unit);
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         struct Unit * unit = GetUnit(i);
 
@@ -127,33 +141,34 @@ void ReorderPlayerUnitsBasedOnDeployment(void)
     int i;
     struct Unit * unit;
 
-    InitUnitStack(UnitSwapBuffer1);
+    CpuFastFill16(0, UnitSwapBuffer2, 0x2000);
+    InitUnitStack(UnitSwapBuffer2);
 
-    for (i = 1; i < 64; i++)
+    for (i = 1; i < 0x40; i++)
     {
         unit = GetUnit(i);
-        if (UNIT_IS_VALID(unit) && !(0x1000C & unit->state))
+        if (unit && UNIT_IS_VALID(unit) && !(0x1000C & unit->state))
             PushUnit(unit);
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         unit = GetUnit(i);
-        if (UNIT_IS_VALID(unit) && !(0x1000C & unit->state))
+        if (unit && UNIT_IS_VALID(unit) && !(0x1000C & unit->state))
             PushUnit(unit);
     }
 
-    for (i = 1; i < 64; i++)
+    for (i = 1; i < 0x40; i++)
     {
         unit = GetUnit(i);
-        if (UNIT_IS_VALID(unit) && (0x1000C & unit->state))
+        if (unit && UNIT_IS_VALID(unit) && (0x1000C & unit->state))
             PushUnit(unit);
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         unit = GetUnit(i);
-        if (UNIT_IS_VALID(unit) && (0x1000C & unit->state))
+        if (unit && UNIT_IS_VALID(unit) && (0x1000C & unit->state))
             PushUnit(unit);
     }
 
@@ -167,9 +182,10 @@ void SortPlayerUnitsForPrepScreen()
     int count = GetChapterAllyUnitCount();
     int _count = 0;
 
-    InitUnitStack(UnitSwapBuffer1);
+    CpuFastFill16(0, UnitSwapBuffer2, 0x2000);
+    InitUnitStack(UnitSwapBuffer2);
 
-    for (i = 1; i < 64; i++)
+    for (i = 1; i < 0x40; i++)
     {
         unit = GetUnit(i);
 
@@ -183,7 +199,7 @@ void SortPlayerUnitsForPrepScreen()
                 PushUnit(unit);
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         unit = GetUnit(i);
 
@@ -197,7 +213,7 @@ void SortPlayerUnitsForPrepScreen()
                 PushUnit(unit);
     }
 
-    for (i = 1; i < 64; i++)
+    for (i = 1; i < 0x40; i++)
     {
         unit = GetUnit(i);
         if (!unit || !UNIT_IS_VALID(unit))
@@ -208,7 +224,7 @@ void SortPlayerUnitsForPrepScreen()
             PushUnit(unit);
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         unit = GetUnit(i);
         if (!unit || !UNIT_IS_VALID(unit))
@@ -221,7 +237,7 @@ void SortPlayerUnitsForPrepScreen()
 
     LoadPlayerUnitsFromUnitStack();
 
-    for (i = 1; i < 64; i++)
+    for (i = 1; i < 0x40; i++)
     {
         unit = GetUnit(i);
 
@@ -252,7 +268,7 @@ void SortPlayerUnitsForPrepScreen()
         unit->state = state1 | state2;
     }
 
-    for (i = 0xC1; i < 0x100; i++)
+    for (i = 0xC0; i < 0x100; i++)
     {
         unit = GetUnit(i);
 
