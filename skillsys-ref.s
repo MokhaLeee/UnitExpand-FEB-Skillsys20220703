@@ -1,10 +1,9 @@
 @ free ram-spaces!
-dat 0x02039800, UnitSwapBuffer1
-dat 0x0203B800, UnitSwapBuffer2
-dat 0x0203D800, gSMSHandleArrayRe
-dat 0x0203F000, gUnitLookupExpa
-dat 0x0203FDDC, gStatScreenSlideUnit
-dat 0x0203FDF0, gPrepUnitListRework
+dat 0x0203B780, UnitSwapBuffer
+dat 0x0203D780, gSMSHandleArrayRe
+dat 0x0203EF80, gUnitLookupExpa
+dat 0x0203FD5C, gStatScreenSlideUnit
+dat 0x0203FD70, gPrepUnitListRework
 
 @ port arm-none-eabi to agbcc!
 fun __divsi3, __aeabi_idiv

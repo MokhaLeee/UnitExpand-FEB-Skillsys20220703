@@ -108,8 +108,8 @@ void ShrinkPlayerUnits(void)
     if (BM_FLAG_LINKARENA & gBmSt.gameStateBits)
         return;
 
-    CpuFastFill16(0, UnitSwapBuffer2, 0x2000);
-    InitUnitStack(UnitSwapBuffer2);
+    CpuFastFill16(0, UnitSwapBuffer, 0x2000);
+    InitUnitStack(UnitSwapBuffer);
 
     for (i = FACTION_BLUE + 1; i < FACTION_GREEN; ++i)
     {
@@ -141,8 +141,8 @@ void ReorderPlayerUnitsBasedOnDeployment(void)
     int i;
     struct Unit * unit;
 
-    CpuFastFill16(0, UnitSwapBuffer2, 0x2000);
-    InitUnitStack(UnitSwapBuffer2);
+    CpuFastFill16(0, UnitSwapBuffer, 0x2000);
+    InitUnitStack(UnitSwapBuffer);
 
     for (i = 1; i < 0x40; i++)
     {
@@ -182,8 +182,8 @@ void SortPlayerUnitsForPrepScreen()
     int count = GetChapterAllyUnitCount();
     int _count = 0;
 
-    CpuFastFill16(0, UnitSwapBuffer2, 0x2000);
-    InitUnitStack(UnitSwapBuffer2);
+    CpuFastFill16(0, UnitSwapBuffer, 0x2000);
+    InitUnitStack(UnitSwapBuffer);
 
     for (i = 1; i < 0x40; i++)
     {

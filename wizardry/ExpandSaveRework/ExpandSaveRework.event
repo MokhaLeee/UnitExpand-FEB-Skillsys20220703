@@ -11,13 +11,13 @@ gSaveBlockDecl:
     SHORT $00D4 1    // 3: suspend 1
     SHORT $00D4 1    // 4: suspend 2 (now same as suspend 1)
     SHORT $0000 2    // 5: link arena
-    SHORT $0000 3    // 6: potentially interesting stuff that nobody really understands (save based chapters!)
+    SHORT $0000 3    // 6: xmap
 
 gSaveBlockTypeSizeLookup:
     SHORT $1A50 // type 0: game
     SHORT $2E78 // type 1: suspend
     SHORT $0000 // type 2: link arena
-    SHORT $0000 // type 3: potentially interesting stuff that nobody really understands (save based chapters!)
+    SHORT $0000 // type 3: xmap
 
 ORG $B83ED8
 POIN MsSaveHookSave MsSaveHookLoad

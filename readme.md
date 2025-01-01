@@ -22,10 +22,4 @@ Expand save unit amount to 91
 
 ## Free RAM space consumption
 
-`0x02039800 - 0x02040000`
-
-- Space from `0x02039800` with size `0x2000` use as generic buffer for swap
-- Space from `0x0203B800` with size `0x2000` use as generic buffer for swap
-- Space from `0x0203E000` with size `0x1000` holds save data from expanded units and others, DON'T touch!
-
-These spaces is free to use but during prepscreen.
+`0x0203B780 - 0x0203FF80`

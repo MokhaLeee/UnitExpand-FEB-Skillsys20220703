@@ -10,7 +10,7 @@
 .global Skill_Getter
 .type Skill_Getter, %function
 Skill_Getter:
-    push {lr}
+    push {r4, lr}
 
 	/* if (SkillsUnitBuffer == unit) */
 	ldr r1, =SkillsUnitBuffer
@@ -34,4 +34,4 @@ Skill_Getter:
 	ldr r0, =SkillsBuffer
 	ldr r1, =SkillsCountBuffer
 	ldr r1, [r1]
-    pop {pc}
+    pop {r4, pc}

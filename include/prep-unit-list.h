@@ -11,5 +11,4 @@ struct PrepUnitListRework {
 
 extern struct PrepUnitListRework gPrepUnitListRework;
 
-extern u8 UnitSwapBuffer1[0x2000];
-extern u8 UnitSwapBuffer2[0x2000];
+extern u8 UnitSwapBuffer[0x2000];

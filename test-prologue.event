@@ -148,7 +148,6 @@ ALIGN 32
 VillageEvent:
 	VillageEventItem(0x10, Village, Boots)
 
-
 ALIGN 4
 ShopItems:
 SHLI Thunder Elfire Nosferatu Divine Mend PureWater Elixir

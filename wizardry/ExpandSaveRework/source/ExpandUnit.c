@@ -123,7 +123,7 @@ void SaveExpandedPurpleUnit(void * dst, int size)
 {
     int i, amt = size / sizeof(struct GameSaveUnit);
 
-    for (i = 0xC0; i < (0xC1 + amt); i++)
+    for (i = 0xC0; i < (0xC0 + amt); i++)
     {
         struct GameSaveUnit unitp;
         PackUnit(i, &unitp);
@@ -137,7 +137,7 @@ void LoadExpandedPurpleUnit(void * src, int size)
 {
     int i, amt = size / sizeof(struct GameSaveUnit);
 
-    for (i = 0xC0; i < (0xC1 + amt); i++)
+    for (i = 0xC0; i < (0xC0 + amt); i++)
     {
         struct GameSaveUnit unitp;
         ReadSramFast(src, &unitp, sizeof(unitp));
